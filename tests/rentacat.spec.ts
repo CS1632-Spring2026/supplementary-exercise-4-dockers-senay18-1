@@ -1,8 +1,10 @@
 import { expect, test } from '@playwright/test';
 
+var baseUrl = "http://localhost:8080"
+
 //test fixture
 test.beforeEach(async ({page}) =>{
-    await page.goto('https://cs1632.appspot.com/');
+    await page.goto(baseUrl);
 
     await page.evaluate(() => {
     document.cookie = "1=false";
@@ -90,7 +92,7 @@ test('TEST-9-GREET-A-CAT', async({page}) =>{
 })
 
 test('TEST-10-GREET-A-CAT-WITH-NAME', async({page}) =>{
-    await page.goto(`https://cs1632.appspot.com/greet-a-cat/Jennyanydots`);
+    await page.goto(`${baseUrl}/greet-a-cat/Jennyanydots`);
 
     await expect(page.getByTestId('greeting')).toHaveText('Meow! from Jennyanydots.');
 })
