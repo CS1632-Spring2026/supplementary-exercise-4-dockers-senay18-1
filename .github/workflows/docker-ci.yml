@@ -34,7 +34,7 @@ jobs:
         run: docker compose up -d
       
       - name: Wait for web service to run
-        run: sh wait-for-webservice.sh
+        run: sh wait-for-web-service.sh
 
 
       - name: Run Playwright Tests
