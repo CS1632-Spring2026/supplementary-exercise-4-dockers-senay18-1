@@ -30,7 +30,8 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    /* Set the testIdAttribute to 'id' to use the id attribute for test IDs. */
+    /* Set the testIdAttribute to 'id' to use the id attribu
+    te for test IDs. */
     testIdAttribute: 'id',
   },
   expect: {
